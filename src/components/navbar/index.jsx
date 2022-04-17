@@ -23,10 +23,10 @@ const Navbar = ({ setOp }) => {
 
                 <ul className='w-3/5 flex flex-row items-center justify-between'>
                     {/* The user is able to click these buttons and change the openings */}
-                    <button className='nav-button' onClick={() => {setOp(opening.bongcloud)}}>Bong Cloud </button>
-                    <button className='nav-button' onClick={() => {setOp(opening.italian)}}>Italian Attack</button>
+                    <button className='nav-button' onClick={() => {setOp(opening.bongcloud)}}>Bongcloud </button>
+                    <button className='nav-button' onClick={() => {setOp(opening.italian)}}>Italian</button>
                     <button className='nav-button' onClick={() => {setOp(opening.sicilianDefense)}}>Silican Defense</button>
-                    <button className='nav-button' onClick={() => {setOp(opening.spanish)}}>Spanish Offense</button>
+                    <button className='nav-button' onClick={() => {setOp(opening.spanish)}}>Spanish</button>
                 </ul>
             </div>
         </div>
