@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+/* 
+  Creates the app element
+*/
+
+import Page from './components/page';
+import Navbar from './components/navbar';
+import './index.css'
+import React from 'react';
+import * as opening from './components/board/openings'
 
 function App() {
+
+  // creates a global state to change the opening on a button click
+  const [opSelection, setOpSelection] = React.useState(opening.bongcloud)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      {/* displays the Navbar component, passing in the state function to change */}
+      <Navbar setOp={setOpSelection} />
+
+      <main>
+        {/* displays the page component, passing in the current state*/}
+        <Page op={opSelection}></Page>
+      </main>
     </div>
   );
 }
