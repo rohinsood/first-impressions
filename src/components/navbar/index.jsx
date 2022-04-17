@@ -23,10 +23,10 @@ const Navbar = ({ setOp }) => {
 
                 <ul className='w-3/5 flex flex-row items-center justify-between'>
                     {/* The user is able to click these buttons and change the openings */}
-                    <button className='nav-button' onClick={() => {setOp(opening.bongcloud)}}>Bongcloud </button>
-                    <button className='nav-button' onClick={() => {setOp(opening.italian)}}>Italian</button>
-                    <button className='nav-button' onClick={() => {setOp(opening.sicilianDefense)}}>Silican Defense</button>
-                    <button className='nav-button' onClick={() => {setOp(opening.spanish)}}>Spanish</button>
+                    <button className='bg-zinc-900 border-gray-300 border-2 font-semibold hover:bg-opacity-30 text-center w-48 rounded-full h-8' onClick={() => {setOp(opening.bongcloud)}}>Bongcloud </button>
+                    <button className='bg-zinc-900 border-gray-300 border-2 font-semibold hover:bg-opacity-30 text-center w-48 rounded-full h-8' onClick={() => {setOp(opening.italian)}}>Italian</button>
+                    <button className='bg-zinc-900 border-gray-300 border-2 font-semibold hover:bg-opacity-30 text-center w-48 rounded-full h-8' onClick={() => {setOp(opening.sicilianDefense)}}>Silican Defense</button>
+                    <button className='bg-zinc-900 border-gray-300 border-2 font-semibold hover:bg-opacity-30 text-center w-48 rounded-full h-8' onClick={() => {setOp(opening.spanish)}}>Spanish</button>
                 </ul>
             </div>
         </div>

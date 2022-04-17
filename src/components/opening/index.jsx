@@ -21,10 +21,10 @@ const Opening = ( {boards} ) => {
     // determines when to disable the arrow buttons and the formatting when enabled
     function dis( limit ) {
         if (moveNum === limit) {
-            formatting = " move-button opacity-30"
+            formatting = " flex justify-center items-center w-16 h-16 rounded-full hover:scale-110 ease-in-out duration-300 opacity-30"
             return true;
         } else {
-            formatting = " move-button"
+            formatting = " flex justify-center items-center w-16 h-16 rounded-full hover:scale-110 ease-in-out duration-300"
             return false 
         }
     }

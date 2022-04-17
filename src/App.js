@@ -14,7 +14,7 @@ function App() {
   const [opSelection, setOpSelection] = React.useState(opening.bongcloud)
 
   return (
-    <div className="App">
+    <div className="flex flex-col bg-gradient-to-bl from-slate-800 to-black h-screen w-full font-sans text-gray-200">
 
       {/* displays the Navbar component, passing in the state function to change */}
       <Navbar setOp={setOpSelection} />
