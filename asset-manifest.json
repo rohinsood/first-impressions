@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/first-impressions/static/css/main.14de6f70.css",
+    "main.js": "/first-impressions/static/js/main.a4755a58.js",
+    "index.html": "/first-impressions/index.html",
+    "main.14de6f70.css.map": "/first-impressions/static/css/main.14de6f70.css.map",
+    "main.a4755a58.js.map": "/first-impressions/static/js/main.a4755a58.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14de6f70.css",
+    "static/js/main.a4755a58.js"
+  ]
+}
