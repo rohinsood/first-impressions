@@ -9,11 +9,12 @@
     } */
 
     .nav-button {
-        @apply bg-zinc-900 border-gray-300 border-2 font-semibold hover:bg-opacity-30 text-center w-48 rounded-full h-8;
+        @apply bg-gradient-to-tr from-zinc-800 to-gray-900 border-2 font-thin border-white text-center w-48 rounded-full 
+        h-10 active:bg-transparent hover:scale-105 transition-all ease-linear duration-150 hover:font-semibold;
     }
 
     .App {
-        @apply flex flex-col bg-gradient-to-bl from-slate-800 to-black h-screen w-full font-sans text-gray-200;
+        @apply flex flex-col bg-gradient-to-bl from-slate-800 to-black min-h-screen min-w-full font-sans text-gray-200 overflow-hidden;
     }
 
     .move-button {

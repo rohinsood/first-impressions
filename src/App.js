@@ -12,16 +12,17 @@ function App() {
 
   // creates a global state to change the opening on a button click
   const [opSelection, setOpSelection] = React.useState(opening.bongcloud)
+  const [move, setMove] = React.useState(0)
 
   return (
-    <div className="flex flex-col bg-gradient-to-bl from-slate-800 to-black h-screen w-full font-sans text-gray-200">
+    <div className="App">
 
       {/* displays the Navbar component, passing in the state function to change */}
-      <Navbar setOp={setOpSelection} />
+      <Navbar setOp={setOpSelection} setMove={setMove} />
 
       <main>
         {/* displays the page component, passing in the current state*/}
-        <Page op={opSelection}></Page>
+        <Page op={opSelection} resetMove={move}></Page>
       </main>
     </div>
   );

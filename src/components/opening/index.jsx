@@ -21,12 +21,20 @@ const Opening = ( {boards} ) => {
     // determines when to disable the arrow buttons and the formatting when enabled
     function dis( limit ) {
         if (moveNum === limit) {
-            formatting = " flex justify-center items-center w-16 h-16 rounded-full hover:scale-110 ease-in-out duration-300 opacity-30"
+            formatting = " move-button opacity-30"
             return true;
         } else {
-            formatting = " flex justify-center items-center w-16 h-16 rounded-full hover:scale-110 ease-in-out duration-300"
+            formatting = " move-button"
             return false 
         }
+    }
+
+    function setMove (change) {
+        if (moveNum > boards[1].length){
+            setMoveNum(0)
+        } else {
+            setMoveNum(moveNum+change)
+        } 
     }
 
     return (
@@ -41,7 +49,7 @@ const Opening = ( {boards} ) => {
             <div className="flex flex-row w-48 h-16 items-center justify-center space-x-6">
                 
                 {/* sets the bottom limit to 0 and decreases move num by 1 when clicked */}
-                <button disabled={dis(0)} onClick={() => setMoveNum(moveNum-1)} className={String("bg-gradient-to-bl from-zinc-900 to-gray-700" + formatting)} data-tooltip-target="tooltip-default">
+                <button disabled={dis(0)} onClick={() => setMoveNum(setMove(-1))} className={String("bg-gradient-to-bl from-zinc-900 to-gray-700" + formatting)} data-tooltip-target="tooltip-default">
                     <TiArrowLeftThick size="36px"/>
                 </button>
 
@@ -50,8 +58,8 @@ const Opening = ( {boards} ) => {
                     {moveNum + 1}
                 </p>
 
-                {/* sets the bottom limit to the max number of moves (aka length of boards) and increases move num by 1 when clicked */}
-                <button disabled={dis(((boards[1].length - 1)))} className={"bg-gradient-to-bl from-slate-600 to-slate-100" + formatting} onClick={() => setMoveNum(moveNum+1)}>
+                {/* sets the top limit to the max number of moves (aka length of boards) and increases move num by 1 when clicked */}
+                <button disabled={dis(((boards[1].length - 1)))} onClick={() => setMove(1)} className={"bg-gradient-to-bl from-slate-600 to-slate-100" + formatting} >
                     <TiArrowRightThick size="36px" color="white"/>
                 </button>
             </div>
