@@ -12,7 +12,7 @@ import React from 'react'
 
     @params list of moves in board format
 */
-const Page = ( {op, resetMove} ) => {
+const Page = ( {op} ) => {
 
     return(
         <div className="py-12 text-center space-y-6 flex-col flex justify-center items-center ">
@@ -28,7 +28,7 @@ const Page = ( {op, resetMove} ) => {
             </h2>
 
             {/* creates the board with the desired opening */}
-            <Opening boards={op} resetMove={resetMove} />
+            <Opening boards={op} />
         </div>
     );
 }

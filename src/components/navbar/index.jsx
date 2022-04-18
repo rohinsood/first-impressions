@@ -13,12 +13,8 @@ import * as opening from '../board/openings'
     @params the global state to modify
     @return the React DOM Component
 */
-const Navbar = ({ setOp, setMove }) => {
+const Navbar = ({ setOp }) => {
 
-    function click(op) {
-        setOp(op)
-        setMove(0)
-    }
 
     return (
         <div className="sticky focus top-0 w-full bg-slate-900 backdrop-blur-sm shadow-md border-b border-gray-700"> 
@@ -29,10 +25,10 @@ const Navbar = ({ setOp, setMove }) => {
 
                 <ul className='w-3/5 flex flex-row items-center justify-between'>
                     {/* The user is able to click these buttons and change the openings */}
-                    <button className='nav-button' onClick={() => {click(opening.bongcloud)}}>Bongcloud </button>
-                    <button className='nav-button' onClick={() => {click(opening.italian)}}>Italian</button>
-                    <button className='nav-button' onClick={() => {click(opening.sicilianDefense)}}>Silican Defense</button>
-                    <button className='nav-button' onClick={() => {click(opening.spanish)}}>Spanish</button>
+                    <button className='nav-button' onClick={() => {setOp(opening.bongcloud)}}>Bongcloud </button>
+                    <button className='nav-button' onClick={() => {setOp(opening.italian)}}>Italian</button>
+                    <button className='nav-button' onClick={() => {setOp(opening.sicilianDefense)}}>Silican Defense</button>
+                    <button className='nav-button' onClick={() => {setOp(opening.spanish)}}>Spanish</button>
                 </ul>
             </div>
         </div>

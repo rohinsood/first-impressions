@@ -10,7 +10,7 @@
 
     .nav-button {
         @apply bg-gradient-to-tr from-zinc-800 to-gray-900 border-2 font-thin border-white text-center w-48 rounded-full 
-        h-10 active:bg-transparent hover:scale-105 transition-all ease-linear duration-150 hover:font-semibold;
+        h-10 hover:scale-105 transition-all ease-linear duration-150 hover:font-semibold active:text-black;
     }
 
     .App {
