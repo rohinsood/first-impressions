@@ -11,7 +11,7 @@ import * as opening from './components/board/openings'
 function App() {
 
   // creates a global state to change the opening on a button click
-  const [opSelection, setOpSelection] = React.useState(opening.bongcloud)
+  const [opSelection, setOpSelection] = React.useState(opening.scotch)
 
   return (
     <div className="App">

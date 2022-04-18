@@ -9,7 +9,7 @@
     } */
 
     .nav-button {
-        @apply bg-gradient-to-tr from-zinc-800 to-gray-900 border-2 font-thin border-white text-center w-48 rounded-full 
+        @apply bg-gradient-to-tr from-slate-400 to-stone-300 text-black font-semibold border-2 border-black text-center w-32 rounded-full 
         h-10 hover:scale-105 transition-all ease-linear duration-150 hover:font-semibold active:text-black;
     }
 
