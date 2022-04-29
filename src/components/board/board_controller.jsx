@@ -61,7 +61,6 @@ export const pieces = {
     @return 3 Dimensional array w/ setup style format
     @param [[row, col, piece]... ]
 */
-
 export function Move (moves) {
 
     // initial state up of the board
@@ -96,18 +95,21 @@ export function Move (moves) {
         var currentBoard = clone2DArray(allBoards[allBoards.length-1])
         
         // iterates through the rows and collumns in the board
-        for (var y = 0; y < 8; ++y){
-            for (var x = 0; x < 8; ++x){
+        rows:
+            for (var y = 0; y < 8; ++y){
+                for (var x = 0; x < 8; ++x){
 
-                // finds the current piece and declares pos to its index
-                if (currentBoard[y][x] === piece){
-                    pos=[y, x];
+                    // finds the current piece and declares pos to its index, then breaks out of the for loop
+                    if (currentBoard[y][x] === piece){
+
+                        // sets the previous position of the piece to a blank space
+                        currentBoard[y][x] = "   ";
+
+                        // breaks out of these for loops when found
+                        break rows;
+                    }
                 }
             }
-        }
-
-        // sets the old position of the piece to an empty space
-        currentBoard[pos[0]][pos[1]] = "   ";
 
         // sets the desired position to the piece
         currentBoard[row - 1][col - 1] = piece;
@@ -117,3 +119,4 @@ export function Move (moves) {
     }
     return allBoards;
 }
+

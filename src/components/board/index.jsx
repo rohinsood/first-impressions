@@ -3,7 +3,7 @@
 */
 
 import React from 'react';
-import { pieces } from './boardController'
+import { pieces } from './board_controller'
 
 /* 
     Used to create the square element with a piece icon inside of it, if applicable

@@ -3,7 +3,7 @@
     Move() returns a 3 dimensional array that stores the current board at different moves
 */
 
-import { A, B, C, D, E, F, G, H, Move } from './boardController'
+import { A, B, C, D, E, F, G, H, Move } from './board_controller'
 
 export const scotch = ["Scotch", Move([
     [E, 4, "wp5"], 
