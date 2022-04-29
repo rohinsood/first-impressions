@@ -105,7 +105,7 @@ export function Move (moves) {
                         // sets the previous position of the piece to a blank space
                         currentBoard[y][x] = "   ";
 
-                        // breaks out of these for loops when found
+                        // breaks out of the board for loops when found
                         break rows;
                     }
                 }
