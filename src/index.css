@@ -19,7 +19,7 @@
     }
 
     .Background {
-        @apply bg-[url(./utils/checkmate.gif)] bg-center bg-cover bg-no-repeat min-h-screen min-w-full backdrop-blur-sm backdrop-brightness-50;
+        @apply bg-[url(./utils/chess-black.gif)] bg-center bg-cover bg-no-repeat min-h-screen min-w-full backdrop-blur-md backdrop-brightness-50;
     }
 
     .move-button {
