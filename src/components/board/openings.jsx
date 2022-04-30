@@ -51,5 +51,5 @@ export const kingsIndian = ["King's Indian Defense", Move([
     [G, 6, "bp7"],
     [C, 4, "wp3"],
     [G, 7, "bb2"],
-    [C, 2, "wn1"]
+    [D, 2, "wn1"]
 ])];
