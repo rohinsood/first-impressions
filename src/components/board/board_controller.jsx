@@ -82,10 +82,7 @@ export function Move (moves) {
     allBoards.push(clone2DArray(setup));
 
 
-    switch (moves[0]) {
-        case 'setup': 
-            break;
-        default:
+    if(moves !== 'setup') {
             // iterates through the number of moves provided
             for (var index = 0; index < moves.length; ++index){
                 
@@ -124,8 +121,11 @@ export function Move (moves) {
                 // appends the current baord to the return var
                 allBoards.push(currentBoard);
             }
-            break; 
+
+            console.log("SHUT OFHOIUASDG")
     }
+
+    console.log("returning")
 
     return allBoards;
 }

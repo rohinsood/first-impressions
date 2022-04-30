@@ -19,9 +19,7 @@ const Navbar = ({ setOp }) => {
     return (
         <div className="nav-bar"> 
             <div className="container flex justify-between items-center mx-auto align-middle h-12 ">
-                <a href="./index.html" className="flex items-center">
-                    <span className="highlight rounded-t-sm rounded-b-md border-t-2 border-black text-3xl font-bold pl-4 h-9">First Impressions</span>
-                </a>
+                <button className="highlight rounded-t-sm rounded-b-md border-t-2 border-black text-3xl font-bold pl-4 h-9" onClick={() => {setOp(opening.setup)}}>First Impressions</button>
 
                 <ul className='w-3/4 flex flex-row items-center justify-between'>
                     {/* The user is able to click these buttons and change the openings */}

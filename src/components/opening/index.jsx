@@ -5,7 +5,7 @@
 import { useState } from "react";
 import Board from "../board"
 import '../../index.css';
-import { TiArrowLeftThick, TiArrowRightThick, TiArrowRepeat } from "react-icons/ti"
+import { BsArrowRightShort, BsArrowLeftShort, BsArrowClockwise } from "react-icons/bs"
 
 /* 
     Creates the Opening React Dom Component with the Board component, opening title, move number, and buttons to interact with the board
@@ -45,18 +45,18 @@ const Opening = ( {boards} ) => {
                 
                 {/* sets the bottom limit to 0 and decreases move num by 1 when clicked */}
                 <button disabled={dis(0)} onClick={() => setMoveNum(moveNum-1)} className={formatting} data-tooltip-target="tooltip-default">
-                    <TiArrowLeftThick size="36px" color="black"/>
+                    <BsArrowLeftShort size="36px" color="black"/>
                 </button>
 
                 {/* displays the current move number */}
                 <button  onClick={() => setMoveNum(0)} className="move-button bg-transparent scale-95" >
-                    <TiArrowRepeat size="36px" color="black" />
+                    <BsArrowClockwise size="36px" color="black" />
                 </button>
 
 
                 {/* sets the top limit to the max number of moves (aka length of boards) and increases move num by 1 when clicked */}
                 <button disabled={dis(((boards[1].length - 1)))} onClick={() => setMoveNum(moveNum+1)} className={formatting} >
-                    <TiArrowRightThick size="36px" color="black"/>
+                    <BsArrowRightShort size="36px" color="black"/>
                 </button>
             </div>
 

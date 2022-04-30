@@ -5,6 +5,7 @@
 
 import { A, B, C, D, E, F, G, H, Move } from './board_controller'
 
+export const setup = ["Home", Move('setup')]; 
 
 export const scotch = ["Scotch", Move([
     [E, 4, "wp5"], 
