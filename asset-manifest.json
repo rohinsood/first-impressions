@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/first-impressions/static/css/main.14474626.css",
-    "main.js": "/first-impressions/static/js/main.61f5ee7d.js",
+    "main.js": "/first-impressions/static/js/main.c90e122c.js",
     "static/media/chess-black.gif": "/first-impressions/static/media/chess-black.c096e5e68523953e8d3d.gif",
     "index.html": "/first-impressions/index.html",
     "main.14474626.css.map": "/first-impressions/static/css/main.14474626.css.map",
-    "main.61f5ee7d.js.map": "/first-impressions/static/js/main.61f5ee7d.js.map"
+    "main.c90e122c.js.map": "/first-impressions/static/js/main.c90e122c.js.map"
   },
   "entrypoints": [
     "static/css/main.14474626.css",
-    "static/js/main.61f5ee7d.js"
+    "static/js/main.c90e122c.js"
   ]
 }
