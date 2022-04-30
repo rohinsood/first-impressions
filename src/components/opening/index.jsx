@@ -31,6 +31,7 @@ const Opening = ( {boards, move, setMove} ) => {
 
     return (
         <>
+        
             {/* creates the board component with the board at the index of the move number */}
             <Board board={boards[1][move]} />
 
@@ -39,7 +40,6 @@ const Opening = ( {boards, move, setMove} ) => {
                 {boards[0]}
                 <span className="font-extralight italic"> - Move {move}</span>
             </p>
-
 
             <div className="highlight flex flex-row w-96 h-20 items-center justify-center space-x-6 rounded-tr-lg rounded-bl-lg">
                 
@@ -52,7 +52,6 @@ const Opening = ( {boards, move, setMove} ) => {
                 <button disabled={dis(0)} onClick={() => setMove(0)} className={"bg-transparent scale-90 hover:scale-100" + formatting} >
                     <BsArrowClockwise size="36px" color="black" />
                 </button>
-
 
                 {/* sets the top limit to the max number of moves (aka length of boards) and increases move num by 1 when clicked */}
                 <button disabled={dis(((boards[1].length - 1)))} onClick={() => setMove(move+1)} className={formatting} >

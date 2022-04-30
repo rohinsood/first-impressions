@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-    /* .text {
-        @apply font-mono text-lg text-left text-gray-800 dark:text-white 
-            mr-auto whitespace-normal;
-    } */
 
     .nav-button {
         @apply highlight font-semibold w-40 rounded-t-sm rounded-b-lg border-t-2 border-black 
@@ -14,8 +10,7 @@
     }
 
     .App {
-        @apply flex flex-col text-zinc-900 font-serif overflow-hidden order-last ;
-        /* bg-gradient-to-bl from-slate-600 to-white */
+        @apply flex flex-col text-zinc-900 font-serif overflow-hidden relative;
     }
 
     .Background {
@@ -34,4 +29,5 @@
     .highlight {
         @apply bg-gradient-to-r from-zinc-300 to-gray-300 px-5 bg-opacity-20
     }
+    
 }

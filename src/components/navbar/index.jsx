@@ -15,6 +15,7 @@ import * as opening from '../board/openings'
 */
 const Navbar = ({ setOp, setMove }) => {
 
+    // this function is used to reset the move number and change the opening when a nav button is clicked
     function set ( opening ) {
         setOp(opening)
         setMove(0)
@@ -23,11 +24,12 @@ const Navbar = ({ setOp, setMove }) => {
     return (
         <div className="nav-bar"> 
             <div className="container flex justify-between items-center mx-auto align-middle h-12 ">
+                
                 <button className="highlight rounded-t-sm rounded-b-md border-t-2 border-black text-3xl font-bold pl-4 h-9" onClick={() => {setOp(opening.setup)}}>First Impressions</button>
 
                 <ul className='w-3/4 flex flex-row items-center justify-between'>
+
                     {/* The user is able to click these buttons and change the openings */}
-                    {/* <button className='nav-button' onClick={() => {setOp(opening.setup)}}>Setup </button> */}
                     <button className='nav-button' onClick={() => {set(opening.scotch)}}>Scotch </button>
                     <button className='nav-button' onClick={() => {set(opening.italian)}}>Italian</button>
                     <button className='nav-button' onClick={() => {set(opening.ruyLopez)}}>Ruy Lopez</button>

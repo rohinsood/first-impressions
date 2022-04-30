@@ -81,8 +81,9 @@ export function Move (moves) {
     var allBoards = [];
     allBoards.push(clone2DArray(setup));
 
-
+    // this if statement only creates a list of boards only when a list of moves provided, passing in 'setup' returns only the setup position
     if(moves !== 'setup') {
+
             // iterates through the number of moves provided
             for (var index = 0; index < moves.length; ++index){
                 
@@ -122,10 +123,8 @@ export function Move (moves) {
                 allBoards.push(currentBoard);
             }
 
-            console.log("SHUT OFHOIUASDG")
     }
 
-    console.log("returning")
 
     return allBoards;
 }
