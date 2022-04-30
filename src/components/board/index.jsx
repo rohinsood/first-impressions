@@ -79,6 +79,7 @@ const Board = ( {board} ) => {
     // initializes the return var
     var files = []
 
+    console.log(board)
     // iterates through the number of rows (8), starts at 7 to match the board index and descends since index 7 is the top-most rank
     for (var x = 7; x >= 0; x--){
 
