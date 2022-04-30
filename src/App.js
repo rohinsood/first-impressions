@@ -12,15 +12,16 @@ function App() {
 
   // creates a global state to change the opening on a button click
   const [opSelection, setOpSelection] = React.useState(opening.setup)
+  const [move, setMove] = React.useState(0)
 
   return (
     <div className="App relative">
       {/* displays the Navbar component, passing in the state function to change */}
-      <Navbar setOp={setOpSelection} />
+      <Navbar setOp={setOpSelection} setMove={setMove} />
 
       <main>
         {/* displays the page component, passing in the current state*/}
-        <Page op={opSelection} ></Page>
+        <Page op={opSelection} move={move} setMove={setMove}></Page>
       </main>
 
     </div>

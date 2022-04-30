@@ -13,8 +13,12 @@ import * as opening from '../board/openings'
     @params the global state to modify
     @return the React DOM Component
 */
-const Navbar = ({ setOp }) => {
+const Navbar = ({ setOp, setMove }) => {
 
+    function set ( opening ) {
+        setOp(opening)
+        setMove(0)
+    }
 
     return (
         <div className="nav-bar"> 
@@ -24,12 +28,12 @@ const Navbar = ({ setOp }) => {
                 <ul className='w-3/4 flex flex-row items-center justify-between'>
                     {/* The user is able to click these buttons and change the openings */}
                     {/* <button className='nav-button' onClick={() => {setOp(opening.setup)}}>Setup </button> */}
-                    <button className='nav-button' onClick={() => {setOp(opening.scotch)}}>Scotch </button>
-                    <button className='nav-button' onClick={() => {setOp(opening.italian)}}>Italian</button>
-                    <button className='nav-button' onClick={() => {setOp(opening.ruyLopez)}}>Ruy Lopez</button>
-                    <button className='nav-button' onClick={() => {setOp(opening.sicilianDefense)}}>Silican</button>
-                    <button className='nav-button' onClick={() => {setOp(opening.scandanavianDefense)}}>Scandanavian</button>
-                    <button className='nav-button' onClick={() => {setOp(opening.kingsIndian)}}>King's Indian</button>
+                    <button className='nav-button' onClick={() => {set(opening.scotch)}}>Scotch </button>
+                    <button className='nav-button' onClick={() => {set(opening.italian)}}>Italian</button>
+                    <button className='nav-button' onClick={() => {set(opening.ruyLopez)}}>Ruy Lopez</button>
+                    <button className='nav-button' onClick={() => {set(opening.sicilianDefense)}}>Silican</button>
+                    <button className='nav-button' onClick={() => {set(opening.scandanavianDefense)}}>Scandanavian</button>
+                    <button className='nav-button' onClick={() => {set(opening.kingsIndian)}}>King's Indian</button>
                 </ul>
             </div>
         </div>

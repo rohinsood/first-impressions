@@ -12,7 +12,7 @@ import React from 'react'
 
     @params list of moves in board format
 */
-const Page = ( {op} ) => {
+const Page = ( {op, move, setMove} ) => {
 
     return(
         <div className="pt-20 pb-6 text-center space-y-5 flex-col flex justify-center items-center ">
@@ -28,7 +28,7 @@ const Page = ( {op} ) => {
             </h2>
 
             {/* creates the board with the desired opening */}
-            <Opening boards={op} />
+            <Opening boards={op} move={move} setMove={setMove}/>
         </div>
     );
 }
