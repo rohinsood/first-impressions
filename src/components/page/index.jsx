@@ -15,15 +15,15 @@ import React from 'react'
 const Page = ( {op} ) => {
 
     return(
-        <div className="py-12 text-center space-y-6 flex-col flex justify-center items-center ">
+        <div className="pt-20 pb-6 text-center space-y-5 flex-col flex justify-center items-center ">
 
             {/* displays the site title */}
-            <h1 className="text-7xl font-bold group max-w-[720px]">
-                First Impressions 💀
+            <h1 className="highlight pb-2 rounded-tr-lg rounded-bl-lg text-7xl font-bold group max-w-[720px] light">
+                First Impressions
             </h1>
 
             {/* displays the site description & purpose */}
-            <h2 className='text-4xl font-s'>
+            <h2 className='highlight rounded-tr-lg rounded-bl-lg pb-1 text-4xl font-s'>
                 An interactive guide to chess openings
             </h2>
 

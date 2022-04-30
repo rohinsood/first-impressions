@@ -5,6 +5,7 @@
 
 import { A, B, C, D, E, F, G, H, Move } from './board_controller'
 
+
 export const scotch = ["Scotch", Move([
     [E, 4, "wp5"], 
     [E, 5, "bp5"], 
@@ -45,7 +46,7 @@ export const scandanavianDefense = ["Scandanavian Defense", Move([
     [E, 2, "wn2"]
 ])];
 
-export const kingsIndian = ["Kings Indian Defense", Move([
+export const kingsIndian = ["King's Indian Defense", Move([
     [D, 4, "wp4"],
     [G, 6, "bp7"],
     [C, 4, "wp3"],

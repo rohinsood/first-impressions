@@ -32,32 +32,31 @@ const Opening = ( {boards} ) => {
     return (
         <>
             {/* creates the board component with the board at the index of the move number */}
-            <Board board = {boards[1][moveNum]}/>
+            <Board board={boards[1][moveNum]} />
 
             {/* displays the title of the current opening */}
-            <p className="font-bold text-3xl text-justify">
+            <p className="highlight pb-1 rounded-tr-lg rounded-bl-lg font-bold text-3xl text-justify">
                 {boards[0]}
                 <span className="font-extralight italic"> - Move {moveNum}</span>
             </p>
 
 
-            <div className="flex flex-row w-64 h-16 items-center justify-center space-x-6">
+            <div className="highlight flex flex-row w-96 h-20 items-center justify-center space-x-6 rounded-tr-lg rounded-bl-lg">
                 
                 {/* sets the bottom limit to 0 and decreases move num by 1 when clicked */}
-                <button disabled={dis(0)} onClick={() => setMoveNum(moveNum-1)} className={String("bg-gradient-to-bl from-zinc-900 to-gray-700" + formatting)} data-tooltip-target="tooltip-default">
-                    <TiArrowLeftThick size="36px"/>
+                <button disabled={dis(0)} onClick={() => setMoveNum(moveNum-1)} className={String("bg-slate-200 border-2 border-black" + formatting)} data-tooltip-target="tooltip-default">
+                    <TiArrowLeftThick size="36px" color="black"/>
                 </button>
 
                 {/* displays the current move number */}
-
-                <button  onClick={() => setMoveNum(0)} className="move-button bg-gradient-to-l from-slate-900 via-slate-800 to-slate-900 scale-95" >
-                    <TiArrowRepeat size="36px"/>
+                <button  onClick={() => setMoveNum(0)} className="move-button border-2 border-white scale-95" >
+                    <TiArrowRepeat size="36px" color="black" />
                 </button>
 
 
                 {/* sets the top limit to the max number of moves (aka length of boards) and increases move num by 1 when clicked */}
-                <button disabled={dis(((boards[1].length - 1)))} onClick={() => setMoveNum(moveNum+1)} className={"bg-gradient-to-tr from-slate-600 to-slate-100" + formatting} >
-                    <TiArrowRightThick size="36px" color="white"/>
+                <button disabled={dis(((boards[1].length - 1)))} onClick={() => setMoveNum(moveNum+1)} className={"bg-slate-200 border-2 border-black" + formatting} >
+                    <TiArrowRightThick size="36px" color="black"/>
                 </button>
             </div>
 

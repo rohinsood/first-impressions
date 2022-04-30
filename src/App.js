@@ -14,8 +14,7 @@ function App() {
   const [opSelection, setOpSelection] = React.useState(opening.scotch)
 
   return (
-    <div className="App">
-
+    <div className="App relative">
       {/* displays the Navbar component, passing in the state function to change */}
       <Navbar setOp={setOpSelection} />
 
@@ -23,6 +22,7 @@ function App() {
         {/* displays the page component, passing in the current state*/}
         <Page op={opSelection} ></Page>
       </main>
+
     </div>
   );
 }

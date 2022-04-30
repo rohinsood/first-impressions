@@ -16,11 +16,11 @@ const Square = ( {black_white, piece} ) => {
     // changes the color of the square based on the param
     var color;
     if (black_white) {
-        color = "bg-gradient-to-br from-gray-500 to-gray-600";
+        color = "bg-gray-400";
     } else {
-        color = "bg-gradient-to-tl from-zinc-700 to-zinc-800";
+        color = "bg-neutral-700";
     }
-    let formatting = `flex flex-col justify-center items-center p-4 rounded-sm shadow-lg opacity-80 w-16 h-16 ${color}`;
+    let formatting = `flex flex-col justify-center items-center p-4 rounded-sm shadow-lg w-16 h-16 ${color}`;
 
     // declares the piece for the desired square
     var move = <div />;
@@ -90,7 +90,7 @@ const Board = ( {board} ) => {
 
     // returns an array of length 8 inside a div element
     return (
-        <div className="chess-board">{files}</div>
+        <div className="highlight py-4 border-black border-2 rounded-tr-lg rounded-bl-lg">{files}</div>
     );
 }
 

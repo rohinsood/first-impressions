@@ -60,6 +60,7 @@ export const pieces = {
 
     @return 3 Dimensional array w/ setup style format
     @param [[row, col, piece]... ]
+    @param 'setup'
 */
 export function Move (moves) {
 
@@ -74,49 +75,58 @@ export function Move (moves) {
         ["bp1","bp2","bp3","bp4","bp5","bp6","bp7","bp8"],
         ["br1","bn1","bb1","bq1","bk1","bb2","bn2","br2"]
     ];
+
     
     // creates the value to return and pushed the clone of setup in order to avoid referencing values
     var allBoards = [];
     allBoards.push(clone2DArray(setup));
 
-    // iterates through the number of moves provided
-    for (var index = 0; index < moves.length; ++index){
-        
-        // declares local vars for the different indexes of the current index
-        var move = moves[index];
-        var col = move[0]; 
-        var row = move[1];
-        var piece = move[2];
 
-        // initializes local vars for the current position of the desired piece [row, col]
-        var pos = []; 
+    switch (moves[0]) {
+        case 'setup': 
+            break;
+        default:
+            // iterates through the number of moves provided
+            for (var index = 0; index < moves.length; ++index){
+                
+                // declares local vars for the different indexes of the current index
+                var move = moves[index];
+                var col = move[0]; 
+                var row = move[1];
+                var piece = move[2];
 
-        // declares the currentBoard as the board in its last state
-        var currentBoard = clone2DArray(allBoards[allBoards.length-1])
-        
-        // iterates through the rows and collumns in the board
-        rows:
-            for (var y = 0; y < 8; ++y){
-                for (var x = 0; x < 8; ++x){
+                // initializes local vars for the current position of the desired piece [row, col]
+                var pos = []; 
 
-                    // finds the current piece and declares pos to its index, then breaks out of the for loop
-                    if (currentBoard[y][x] === piece){
+                // declares the currentBoard as the board in its last state
+                var currentBoard = clone2DArray(allBoards[allBoards.length-1])
+                
+                // iterates through the rows and collumns in the board
+                rows:
+                    for (var y = 0; y < 8; ++y){
+                        for (var x = 0; x < 8; ++x){
 
-                        // sets the previous position of the piece to a blank space
-                        currentBoard[y][x] = "   ";
+                            // finds the current piece and declares pos to its index, then breaks out of the for loop
+                            if (currentBoard[y][x] === piece){
 
-                        // breaks out of the board for loops when found
-                        break rows;
+                                // sets the previous position of the piece to a blank space
+                                currentBoard[y][x] = "   ";
+
+                                // breaks out of the board for loops when found
+                                break rows;
+                            }
+                        }
                     }
-                }
-            }
 
-        // sets the desired position to the piece
-        currentBoard[row - 1][col - 1] = piece;
-        
-        // appends the current baord to the return var
-        allBoards.push(currentBoard);
+                // sets the desired position to the piece
+                currentBoard[row - 1][col - 1] = piece;
+                
+                // appends the current baord to the return var
+                allBoards.push(currentBoard);
+            }
+            break; 
     }
+
     return allBoards;
 }
 
