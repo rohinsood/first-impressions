@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/first-impressions/static/css/main.785c547f.css",
+    "main.css": "/first-impressions/static/css/main.a956bb77.css",
     "main.js": "/first-impressions/static/js/main.286d075d.js",
-    "static/media/jinx-arcane.gif": "/first-impressions/static/media/jinx-arcane.ca99601335c0c43be753.gif",
+    "static/media/chess.gif": "/first-impressions/static/media/chess.4f2f684dbc20893c27c2.gif",
     "index.html": "/first-impressions/index.html",
-    "main.785c547f.css.map": "/first-impressions/static/css/main.785c547f.css.map",
+    "main.a956bb77.css.map": "/first-impressions/static/css/main.a956bb77.css.map",
     "main.286d075d.js.map": "/first-impressions/static/js/main.286d075d.js.map"
   },
   "entrypoints": [
-    "static/css/main.785c547f.css",
+    "static/css/main.a956bb77.css",
     "static/js/main.286d075d.js"
   ]
 }
