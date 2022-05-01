@@ -14,7 +14,7 @@
     }
 
     .Background {
-        @apply bg-[url(./utils/jinx-arcane.gif)] bg-center bg-cover bg-no-repeat min-h-screen min-w-full backdrop-blur-md backdrop-brightness-50;
+        @apply bg-[url(./utils/chess.gif)] bg-center bg-cover bg-no-repeat min-h-screen min-w-full backdrop-blur-md backdrop-brightness-50;
     }
 
     .move-button {
