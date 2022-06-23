@@ -1,6 +1,6 @@
 ### [First Impressions 💀](https://rohinsood.github.io/first-impressions/index.html)
 ---
-#### An interactive guide to chess openings
+### ♟️ An interactive guide to chess openings
 
 > ♟️ Use the right and left arrows to show the moves of an opening
 
